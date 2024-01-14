@@ -1,42 +1,17 @@
-# Nitro Minimal Starter
+# Bug reproduction
 
-Look at the [Nitro documentation](https://nitro.unjs.io/) to learn more.
+## Testing the bug
 
-## Setup
-
-Make sure to install the dependencies:
+This bug exists for the Vercel Edge Runtime and Deno. These instructions show Deno cause it's easier for local testing.
 
 ```bash
-# npm
-npm install
+# You must have `pnpm` and Deno installed.
+pnpm test-in-deno
 
-# yarn
-yarn install
-
-# pnpm
-pnpm install
 ```
 
-## Development Server
+## History
 
-Start the development server on <http://localhost:3000>
+I found this bug while using Solid Start. Async server functions (`"use server";`) weren't working on Vercel Edge Runtime and I traced it back to this.
 
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nitro.unjs.io/deploy) for more information.
+https://github.com/solidjs/solid-start/pull/1255

@@ -4,9 +4,11 @@
     "prepare": "nitropack prepare",
     "dev": "nitropack dev",
     "build": "nitropack build",
-    "preview": "node .output/server/index.mjs"
+    "preview": "node .output/server/index.mjs",
+    "test-in-deno": "NITRO_PRESET=deno nitropack build && cd .output && deno run -A server/index.ts"
   },
   "dependencies": {
+    "h3": "^1.10.0",
     "nitropack": "latest"
   }
 }

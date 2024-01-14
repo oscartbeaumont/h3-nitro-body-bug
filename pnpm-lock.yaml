@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  h3:
+    specifier: ^1.10.0
+    version: 1.10.0
   nitropack:
     specifier: latest
     version: 2.8.1
