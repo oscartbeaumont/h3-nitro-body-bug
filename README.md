@@ -8,6 +8,10 @@ This bug exists for the Vercel Edge Runtime and Deno. These instructions show De
 # You must have `pnpm` and Deno installed.
 pnpm test-in-deno
 
+# In another terminal:
+curl -X POST http://localhost:8000/
+   -H 'Content-Type: application/json'
+   -d '{}' # Notice curl doesn't stop running because the server doesn't respond.
 ```
 
 ## History
